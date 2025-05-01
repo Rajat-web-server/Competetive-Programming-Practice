@@ -3,9 +3,9 @@
 #include <algorithm>
 using namespace std;
 
-int main()
+void vector1()
 {
-    // vector
+  // vector
     int x;
     vector<int> v = {10, 20, 30, 40};
     v.emplace_back(11);
@@ -37,7 +37,21 @@ int main()
         //Auto
 
       for (auto it = v.end(); it !=v.begin(); it--) 
-      {cout<<"First element (auto) : "<<*it<<"\n";} 
+      {cout<<"First element (auto) : "<<*it<<"\n";}  
+}
+
+void vector2(){
+    vector <int> v ={1,2,3,4,5};
+    v.erase(v.end());
+    for (int x : v) 
+    {
+        cout <<x<<" ";
+    }
+}
+
+int main()
+{
+     vector2();
        
         
 }
