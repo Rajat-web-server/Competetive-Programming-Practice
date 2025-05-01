@@ -32,7 +32,12 @@ int main()
 
         v[3]=46;
         /* for (auto x : v) */
-        cout<<"changed vector: "<<v[3];
+        cout<<"changed vector: "<<v[3]<<endl;
 
-        //
+        //Auto
+
+      for (auto it = v.end(); it !=v.begin(); it--) 
+      {cout<<"First element (auto) : "<<*it<<"\n";} 
+       
+        
 }
