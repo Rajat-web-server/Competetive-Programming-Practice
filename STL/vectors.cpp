@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include<list>
 using namespace std;
 
 void vector1()
@@ -76,7 +77,24 @@ void vector2()
 
 }
 
+void list_()
+{
+   list<int> one = {1, 2, 3, 4};
+   one.push_front(0);
+   one.push_back(5);
+   cout<<"List : ";
+   
+   for (int x : one) cout<< x <<" ";
+   cout<<endl;
+   one.pop_back();
+   one.pop_front();
+   cout<<"List : ";
+   for (int x : one) cout<<x<<" ";
+   cout<<endl;
+
+}
+
 int main()
 {
-    vector2();
+    list_();
 }
