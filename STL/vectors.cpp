@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <list>
 #include <deque>
+#include<stack>
 using namespace std;
 
 void vector1()
@@ -114,7 +115,27 @@ void Deque()
     cout << endl;
 }
 
+void Stack_()
+{
+    stack<int>st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    st.push(4);
+    st.push(4);
+    st.emplace(5);
+    
+    cout<<"Stack : ";
+    cout<<st.top()<<endl;
+    st.pop();
+    cout<<"size : ";
+    cout<<st.size()<<endl;
+    /* cout<<st.empty()<<" l"<<endl; */
+    stack<int>st1,st2;
+    st1.swap(st2);
+}
+
 int main()
 {
-    Deque();
+    Stack_();
 }
