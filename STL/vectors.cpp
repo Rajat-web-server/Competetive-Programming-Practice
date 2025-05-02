@@ -1,13 +1,14 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include<list>
+#include <list>
+#include <deque>
 using namespace std;
 
 void vector1()
 {
     // vector
-    
+
     vector<int> v = {10, 20, 30, 40};
     v.emplace_back(11);
     v.push_back(50);
@@ -44,57 +45,76 @@ void vector1()
 }
 
 void vector2()
-{   // Erase
+{ // Erase
     vector<int> v = {1, 2, 3, 4, 5};
     v.erase(v.end());
     for (int x : v)
     {
         cout << x << " ";
     }
-    cout<<endl;
-     //Insert 
-     vector<int> c = {11,22,33,44,55};
-     v.insert(v.begin(),99);
-     cout<<"After insert : ";
-     for (int x : c) 
-     cout<< x <<" ";
-     cout<<endl;
+    cout << endl;
+    // Insert
+    vector<int> c = {11, 22, 33, 44, 55};
+    v.insert(v.begin(), 99);
+    cout << "After insert : ";
+    for (int x : c)
+        cout << x << " ";
+    cout << endl;
 
-     //Copy
-     vector <int> c2;
-     copy(c.begin(), c.end(), back_inserter(c2));
-     cout<<"copied vector : ";
-     for (int x: c2) cout <<x<<" ";
-     c2.emplace_back(33);
-     cout<<endl;
-     cout<<"emplace back result : ";
-     for (int x : c2) cout << x << " ";
-     c2.push_back(33);
-     cout<<endl;
-     cout<<"Push back result : ";
-     for (int x : c2) cout << x << " ";
-     cout<<endl;
-
+    // Copy
+    vector<int> c2;
+    copy(c.begin(), c.end(), back_inserter(c2));
+    cout << "copied vector : ";
+    for (int x : c2)
+        cout << x << " ";
+    c2.emplace_back(33);
+    cout << endl;
+    cout << "emplace back result : ";
+    for (int x : c2)
+        cout << x << " ";
+    c2.push_back(33);
+    cout << endl;
+    cout << "Push back result : ";
+    for (int x : c2)
+        cout << x << " ";
+    cout << endl;
 }
 
 void list_()
 {
-   list<int> one = {1, 2, 3, 4};
-   one.push_front(0);
-   one.push_back(5);
-   cout<<"List : ";
-   
-   for (int x : one) cout<< x <<" ";
-   cout<<endl;
-   one.pop_back();
-   one.pop_front();
-   cout<<"List : ";
-   for (int x : one) cout<<x<<" ";
-   cout<<endl;
+    list<int> one = {1, 2, 3, 4};
+    one.push_front(0);
+    one.push_back(5);
+    cout << "List : ";
 
+    for (int x : one)
+        cout << x << " ";
+    cout << endl;
+    one.pop_back();
+    one.pop_front();
+    cout << "List : ";
+    for (int x : one)
+        cout << x << " ";
+    cout << endl;
+}
+void Deque()
+{
+    deque<int> two = {5, 10, 15, 20, 25};
+    two.push_front(11);
+    two.push_back(22);
+    cout << "List :";
+    for (int x : two)
+        cout << x << " ";
+    cout << endl;
+    two.pop_back();
+    two.pop_front();
+    cout << "List :";
+    for (int x : two)
+        cout << x << " ";
+    cout << endl;
 }
 
 int main()
 {
-    list_();
+    Deque();
 }
