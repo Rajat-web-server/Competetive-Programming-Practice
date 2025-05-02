@@ -4,6 +4,7 @@
 #include <list>
 #include <deque>
 #include<stack>
+#include<queue>
 using namespace std;
 
 void vector1()
@@ -116,7 +117,7 @@ void Deque()
 }
 
 void Stack_()
-{
+{  //LIFO
     stack<int>st;
     st.push(1);
     st.push(2);
@@ -135,7 +136,28 @@ void Stack_()
     st1.swap(st2);
 }
 
+void Queue_()
+{  //FIFO
+    queue<int>q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.push(4);
+    q.emplace(5);
+
+    cout<<"queue :";
+    
+    q.back() += 5;
+    cout<<q.back()<<endl;
+    cout<<"queue :";
+    
+    cout<<q.front() <<endl;
+    q.pop();
+    cout<<"queue :";
+    cout<<q.front();
+}
+
 int main()
 {
-    Stack_();
+    Queue_();
 }
