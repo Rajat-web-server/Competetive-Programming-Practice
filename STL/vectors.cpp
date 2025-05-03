@@ -5,6 +5,7 @@
 #include <deque>
 #include<stack>
 #include<queue>
+#include<set>
 using namespace std;
 
 void vector1()
@@ -158,6 +159,7 @@ void Queue_()
 }
 
 void PQ(){
+    //for the greatest value (Max heap)
     priority_queue<int> pq;
     pq.push(5);
     pq.push(2);
@@ -171,7 +173,7 @@ void PQ(){
     cout<<"Priority Queue : ";
     cout<<pq.top()<<endl;
 
-    //Minimum Heap
+    //Minimum Heap--> Lowest number (minimum priority queue) Not a linear container
     priority_queue<int, vector<int>, greater<int>>pq_ ;
     pq_.push(5);
     pq_.push(2);
@@ -181,7 +183,20 @@ void PQ(){
     cout<<"Priority Queue : ";
     cout<<pq_.top()<<endl;
 
+    //Note; push/pop-->log n, top-->o(1);  time-complexity
+
 }
+ 
+    void SET(){
+        //stores everything in the sorted order and stores unique; Not a linear container     
+        set<int>st;
+        st.insert(1);
+        st.emplace(2);
+        st.insert(2);//it won't add extra 2 ;
+        st.insert(4);
+        st.insert(3);
+        //Iterator points to the address
+    }
 
 int main()
 {
