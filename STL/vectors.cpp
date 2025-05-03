@@ -157,7 +157,33 @@ void Queue_()
     cout<<q.front();
 }
 
+void PQ(){
+    priority_queue<int> pq;
+    pq.push(5);
+    pq.push(2);
+    pq.push(8);
+    pq.push(10);
+    
+    cout<<"Priority Queue : ";
+    cout<<pq.top()<<endl;
+    
+    pq.pop();
+    cout<<"Priority Queue : ";
+    cout<<pq.top()<<endl;
+
+    //Minimum Heap
+    priority_queue<int, vector<int>, greater<int>>pq_ ;
+    pq_.push(5);
+    pq_.push(2);
+    pq_.push(8);
+    pq_.push(10);
+
+    cout<<"Priority Queue : ";
+    cout<<pq_.top()<<endl;
+
+}
+
 int main()
 {
-    Queue_();
+    PQ();
 }
