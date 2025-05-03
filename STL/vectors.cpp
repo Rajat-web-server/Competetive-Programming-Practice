@@ -196,9 +196,14 @@ void PQ(){
         st.insert(4);
         st.insert(3);
         //Iterator points to the address
+        for (int x : st)
+        cout<<x<<" ";
+        cout<<endl; //represented in a sorted order
+
+       
     }
 
 int main()
 {
-    PQ();
+    SET();
 }
