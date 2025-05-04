@@ -227,7 +227,47 @@ void PQ(){
 
     }
 
+    void Mutliset(){
+    //Stores in a sorted order but not in a unique sense;
+
+    multiset<int> ms;
+    ms.insert(2);
+    ms.insert(4);
+    ms.insert(6);
+    ms.insert(6);
+
+    ms.erase(6);
+    int cnt = ms.count(2);
+    cout<<cnt<<endl;//count the occurence of 2;
+    for (int x : ms)
+    cout<<x<<" ";
+    cout<<endl;
+    multiset<int> ms1;
+    ms1.insert(3);
+    ms1.insert(3);
+    ms1.insert(3);
+    ms1.insert(3);
+    ms1.insert(3);
+
+   /*  ms1.erase(3); *///all 3s gonna get erased;
+
+    ms1.erase(ms1.find(3));
+    for(int x: ms1)
+    cout<< x <<" ";
+    cout<<endl;
+   
+    cout<<"Erasing at a range : ";
+    auto it1=ms1.find(3);
+    auto it2= it1;
+    advance(it2,2);
+    ms1.erase(it1,it2);
+    for(int x: ms1)
+    cout<< x <<" ";
+    cout<<endl;
+
+    }
+
 int main()
 {
-    SET();
+    Mutliset();
 }
