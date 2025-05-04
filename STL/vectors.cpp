@@ -6,6 +6,7 @@
 #include<stack>
 #include<queue>
 #include<set>
+#include<map>
 using namespace std;
 
 void vector1()
@@ -265,9 +266,41 @@ void PQ(){
     cout<< x <<" ";
     cout<<endl;
 
+    //unordered set is same set;
+    //unique but not sorted;
+    //lower_bound 7 upper_bound function doesn't work in this;
+    //
+    }
+
+    void Map(){
+        //works like key-value pair
+        //key is unique but value can be repeated
+        //Map stores unique keys in sorted order
+        map<int, int> mpp;
+        mpp[1]=2;
+        mpp[2]=3;
+        for (auto x : mpp)
+        cout<<x.first<<" ";
+        cout<<endl;
+        cout<<"Another : ";
+        map<int, pair<int,int>> mpp1;
+        mpp1[1]={10,20};
+        mpp1[2]={11,22};
+        for (auto x: mpp1)
+        cout<<x.first<<" "<<x.second.first<<x.second.second<<endl;
+        cout<<"Map : ";
+        map< pair<int,int>,int>mpp2;
+        mpp2[{1,2}]=10;
+        mpp2[{1,3}]=11;
+        for (auto x : mpp2)
+        cout<<x.first.first<<" "<<x.first.second<<" "<<x.second<<endl;
+
+        //multimap---> evertything same as map, but it can store multiple keys.
+        //unordermap--->it gonna have unique keys, but not sorted
     }
 
 int main()
 {
-    Mutliset();
+    Map();
+    return 0;
 }
