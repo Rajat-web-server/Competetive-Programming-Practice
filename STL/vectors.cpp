@@ -195,12 +195,36 @@ void PQ(){
         st.insert(2);//it won't add extra 2 ;
         st.insert(4);
         st.insert(3);
+        auto it = st.find(3);
+        it = st.find(6);
+        st.erase(3);
+        st.erase(4);
         //Iterator points to the address
         for (int x : st)
         cout<<x<<" ";
         cout<<endl; //represented in a sorted order
+        
+        set<int>st1;
+        st1.insert(1);
+        st1.insert(3);
+        st1.insert(5);
+        st1.insert(7);
+        st1.insert(8);
+        st1.insert(8);
+        auto it1 = st1.find(1);
+        auto it2 = st1.find(7);
+        st1.erase(it1, it2);
+        for (int x : st1)
+        //Note erase format-->[first, last) ;
+        cout<<x<<" ";
+        cout<<endl;
 
-       
+        auto it3=st1.lower_bound(1);
+        auto it4=st1.upper_bound(3);
+        for (int x : st1)
+        cout<<x<<" ";
+        cout<<endl;
+
     }
 
 int main()
