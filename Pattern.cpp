@@ -13,7 +13,19 @@ void Pattern_1 ()
   }
 }
 
+void Pattern_2()
+{
+  for (int i=0;i<4;i++)
+  {
+    for (int j=0;j<=i;j++)
+    {
+      cout<<"* ";
+    }
+    cout<<endl;
+  }
+
+}
 int main ()
 {
-    Pattern_1();
+    Pattern_2();
 }
