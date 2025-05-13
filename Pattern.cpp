@@ -49,7 +49,19 @@ void Pattern_4()
   }
 }
 
+void Pattern_5()
+{
+  for (int i = 1; i < 5; i++)
+  {
+    for (int j = i; j < 5; j++)
+    {
+      cout <<"* ";
+    }
+    cout << endl;
+  }
+}
+
 int main()
 {
-  Pattern_4();
+  Pattern_5();
 }
