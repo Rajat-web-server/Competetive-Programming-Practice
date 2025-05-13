@@ -1,42 +1,55 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void Pattern_1 ()
+void Pattern_1()
 {
-  for (int i=0;i<4;i++)
+  for (int i = 0; i < 4; i++)
   {
-    for (int j=0;j<4;j++)
+    for (int j = 0; j < 4; j++)
     {
-        cout<<"*"<<" ";
+      cout << "*" << " ";
     }
-    cout<<endl;
+    cout << endl;
   }
 }
 
-void Pattern_2 ()
+void Pattern_2()
 {
-  for (int i=0;i<4;i++)
+  for (int i = 0; i < 4; i++)
   {
-    for (int j=0;j<=i;j++)
+    for (int j = 0; j <= i; j++)
     {
-      cout<<"* ";
+      cout << "* ";
     }
-    cout<<endl;
+    cout << endl;
   }
 }
 
-void Pattern_3 ()
+void Pattern_3()
 {
-  for (int i=1;i<5;i++)
+  for (int i = 1; i < 5; i++)
   {
-    for (int j=1;j<=i;j++)
+    for (int j = 1; j <= i; j++)
     {
-      cout<<j<<" ";
+      cout << j << " ";
     }
-    cout<<endl;
+    cout << endl;
   }
 }
-int main ()
+
+void Pattern_4()
 {
-    Pattern_3();
+  for (int i = 1; i < 5; i++)
+  {
+    for (int j = 1; j <= i; j++)
+    {
+      cout << i << " ";
+    }
+    cout << endl;
+  }
+}
+
+int main()
+{
+  Pattern_4();
 }
