@@ -53,7 +53,7 @@ void Pattern_5()
 {
   for (int i = 1; i < 5; i++)
   {
-    for (int j = i; j < 5; j++)
+    for (int j = i; j < 5; j++)   /* for (int j =0;j<n-i+1;j++)  alternate*/
     {
       cout <<"* ";
     }
@@ -61,7 +61,19 @@ void Pattern_5()
   }
 }
 
+void Pattern_6()
+{
+  for (int i = 1; i < 5; i++)
+  {
+    for (int j = i; j < 5; j++)   /* for (int j =0;j<n-i+1;j++)  alternate*/
+    {
+      cout <<j<<" ";
+    }
+    cout << endl;
+  }
+}
+
 int main()
 {
-  Pattern_5();
+  Pattern_6();
 }
