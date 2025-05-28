@@ -75,26 +75,25 @@ void Pattern_6()
 
 void Pattern_7()
 {
-  for (int n = 0; n<5; n++)
+  for (int i = 0; i<5; i++)
   {
     //space
-    for (int m=0;m<n-1+1;m++)
+    for (int j=0;j<5-i-1+1;j++)
     {
       cout<<" ";
     }
       //Stars
-      for (int j = 1; j <= 2 * n - 1; j++)
+      for (int j = 1; j <= 2 * i + 1; j++)
       {
         cout << "* ";
       }
       //space
-    for (int o=0;o<n-1+1;o++)
+    for (int j=0;j<5-i-1+1;j++)
     {
       cout<<" ";
     }
-    
+    cout<<endl;
   }
-  
 }
 
 int main()
