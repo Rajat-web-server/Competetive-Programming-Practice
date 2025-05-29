@@ -3,7 +3,7 @@ using namespace std;
 
 void name(int i,int n)
 {
-    if(i>n)
+    if(i>n)//Base condition
     {
       return ;  
     }
@@ -19,3 +19,7 @@ int main ()
     name(1,n);
     return 0;
 }
+
+/* Here :
+time Complexity-->O(n)
+Space Complexity-->O(n) */
