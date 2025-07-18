@@ -13,11 +13,38 @@ void Pattern_1()
   }
 }
 
+void p2()
+{
+  for (int i = 0; i < 4; i++)
+
+  {
+
+    // space
+    for (int m = i; m < 4; m++)
+    {
+      cout << " ";
+    }
+
+    // star
+    for (int j = 0; j < (2 * i) + 1; j++)
+    {
+      cout << "*";
+    }
+
+    // space
+    for (int m = i; m < 4; m++)
+    {
+      cout << " ";
+    }
+    cout << endl;
+  }
+}
+
 void Pattern_2()
 {
   for (int i = 0; i < 4; i++)
   {
-    for (int j = 0; j <= i; j++)
+    for (int j = i; j <= 4; j++)
     {
       cout << "* ";
     }
@@ -75,28 +102,53 @@ void Pattern_6()
 
 void Pattern_7()
 {
-  for (int i = 0; i<5; i++)
+  for (int i = 0; i < 5; i++)
   {
-    //space
-    for (int j=0;j<5-i-1+1;j++)
+    // space
+    for (int j = 0; j < 5 - i - 1 + 1; j++)
+    {
+      cout << " ";
+    }
+    // Stars
+    for (int j = 1; j <= 2 * i + 1; j++)
+    {
+      cout << "*";
+    }
+    // space
+    for (int j = 0; j < 5 - i - 1 + 1; j++)
+    {
+      cout << " ";
+    }
+    cout << endl;
+  }
+}
+
+void pattern8()
+{
+  for (int i = 0; i < 5; i++)
+  {
+    // space
+    for (int j = 0;j<i;j++)
     {
       cout<<" ";
     }
-      //Stars
-      for (int j = 1; j <= 2 * i + 1; j++)
-      {
-        cout << "* ";
-      }
-      //space
-    for (int j=0;j<5-i-1+1;j++)
+    
+    
+    // Stars
+    for (int j = 0; j < 2*5 - (2*i+1); j++)
     {
-      cout<<" ";
+      cout << "*";
     }
-    cout<<endl;
+    // space
+    for (int j = 0; j <i; j++)
+    {
+      cout << " ";
+    }
+    cout << endl; 
   }
 }
 
 int main()
 {
-  Pattern_7();
+   pattern8();
 }
