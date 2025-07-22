@@ -148,7 +148,53 @@ void pattern8()
   }
 }
 
+void pattern9()
+{
+  for(int i=0; i<9;i++)
+
+   if(i>5){
+    // space
+    for (int j = 0; j < 5 - i - 1 + 1; j++)
+    {
+      cout << " ";
+    }
+    // Stars
+    for (int j = 1; j <= 2 * i + 1; j++)
+    {
+      cout << "*";
+    }
+    // space
+    for (int j = 0; j < 5 - i - 1 + 1; j++)
+    {
+      cout << " ";
+    }
+    cout << endl;
+
+   }
+   else{
+    // space
+    for (int j = 0;j<i;j++)
+    {
+      cout<<" ";
+    }
+    
+    
+    // Stars
+    for (int j = 0; j < 2*5 - (2*i+1); j++)
+    {
+      cout << "*";
+    }
+    // space
+    for (int j = 0; j <i; j++)
+    {
+      cout << " ";
+    }
+    cout << endl; 
+   }
+  
+}
+
 int main()
 {
-   pattern8();
+   pattern9();
 }
