@@ -19,10 +19,24 @@ void extraction_of_digit(int n){
 
 }
 
+void reverse(int n){
+    int reverse=0;
+    while(n>0)
+    {
+        int lastDigit=n%10;
+        n=n/10;
+        cout<<"lastdigit : "<<lastDigit<<endl;
+        reverse=(reverse*10)+lastDigit;
+
+    }
+    cout<<reverse;
+}
+
+
 int main ()
 {
     int n;
     cout<<"Enter the number :  ";
     cin>>n;
-    extraction_of_digit(n);
+    reverse(n);
 }
